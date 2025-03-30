@@ -1,7 +1,14 @@
 {
-    "build": {
-      "env": {
-        "PYTHON_VERSION": "3.11"
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "functions": {
+      "api/*": {
+        "runtime": "python3.11"
       }
     }
   }
