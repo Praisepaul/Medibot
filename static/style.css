@@ -22,6 +22,11 @@ body,html{
 }
 .msg_card_body{
 	overflow-y: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+.msg_card_body::-webkit-scrollbar {
+    display: none;
 }
 .card-header{
 	border-radius: 15px 15px 0 0 !important;
@@ -220,4 +225,34 @@ border-radius: 0 0 15px 15px !important;
 	.contacts_card{
 	margin-bottom: 15px !important;
 }
+}
+
+.typing-indicator {
+	display: none;
+	text-align: left;
+	padding: 10px;
+}
+
+.typing-indicator span {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 4px;
+	background-color: gray;
+	border-radius: 50%;
+	animation: blink 1.5s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+	animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+@keyframes blink {
+	0% { opacity: 0.2; }
+	20% { opacity: 1; }
+	100% { opacity: 0.2; }
 }
