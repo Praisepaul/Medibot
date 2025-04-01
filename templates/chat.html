@@ -150,13 +150,7 @@
       }
 
       function formatBotResponse(text) {
-        text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-        text = text.replace(/\*(.*?)\*/g, "<em>$1</em>");
-        text = text.replace(/- (.*?)(\n|$)/g, "<li>$1</li>");
-        text = text.replace(/(\<li>.*?\<\/li>)+/g, "<ul>$&</ul>");
-        text = text.replace(/\d+\.\s(.*?)(\n|$)/g, "<li>$1</li>");
-        text = text.replace(/(\<li>.*?\<\/li>)+/g, "<ol>$&</ol>");
-        text = text.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
+        
         return text;
       }
 
